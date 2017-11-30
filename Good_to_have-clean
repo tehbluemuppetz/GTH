@@ -1,0 +1,31 @@
+
+Getting started with GIT using SSH
+=====================================
+
+Create new virtual env:
+--------------------------
+  204  python3 -m venv RPGit
+  205  cd RPGit
+  206  . bin/activate
+
+Initial steps for GIT
+---------------------------
+  207  git init
+  208  touch README.md
+  209  atom README.md
+  210  git add -A
+  211  git commit -m "init"
+
+Add SSH authentication:
+----------------------------
+  000  ssh-keygen -t rsa -b 4096 -C "email@gmail.com"
+  214  eval "$(ssh-agent -s)"
+  215  ssh-add ~/.ssh/id_rsa
+  216  ssh -T git@github.com
+  224  git remote set-url origin git@github.com:username/reponame.git
+  226  git push origin master
+
+Exit the virtual env:
+----------------------
+  227  deactivate
+
