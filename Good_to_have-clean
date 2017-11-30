@@ -30,3 +30,9 @@ Exit the virtual env:
 ----------------------
   227  deactivate
 
+When updating:
+-----------------------
+git commit -am "corrected"
+git push origin master
+
+
